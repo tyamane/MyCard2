@@ -9,7 +9,7 @@
       <ion-content>
         <ion-list>
           <ion-item>
-            <ion-icon name="hert" slot="start"></ion-icon>
+            <ion-icon :icon="heart" slot="start"></ion-icon>
             <ion-label>Inbox</ion-label>
           </ion-item>
           <ion-item>
@@ -51,7 +51,8 @@ import {
   IonTitle, 
   IonToolbar,
   IonIcon,
-  IonButtons
+  IonButtons,
+  IonLabel
 } from '@ionic/vue';
 import { heart } from 'ionicons/icons';
 import { defineComponent } from 'vue';
@@ -68,10 +69,11 @@ export default defineComponent({
     IonMenu, 
     IonTitle, 
     IonToolbar,
-    IonIcon
+    IonIcon,
+    IonLabel
   },
   setup(){
-    return { heart }
+    return { heart  }
   }
 });
 </script>
