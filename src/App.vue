@@ -8,7 +8,7 @@
       </ion-header>
       <ion-content>
         <ion-list>
-          <ion-item>
+          <ion-item button @click="buttonClick()">
             <ion-icon :icon="heart" slot="start"></ion-icon>
             <ion-label>Inbox</ion-label>
           </ion-item>
@@ -51,7 +51,6 @@ import {
   IonTitle, 
   IonToolbar,
   IonIcon,
-  IonButtons,
   IonLabel
 } from '@ionic/vue';
 import { heart } from 'ionicons/icons';
@@ -74,6 +73,14 @@ export default defineComponent({
   },
   setup(){
     return { heart  }
+  },
+  methods: {
+    buttonClick() {
+      // Vueはmethodsのthisを自動的に束縛して、常にコンポーネントのインスタンスを参照します。
+      // これにより、メソッドがイベントリスナやコールバックとして使われる際に、正しいthisの値を保持することができます。
+      // Vueが適切なthisの値を束縛するのを防ぐため、methodsを定義する際にはアロー関数を使うのは避けるべきです。
+      console.log("aaaa")
+    }
   }
 });
 </script>
